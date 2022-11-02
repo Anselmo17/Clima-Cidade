@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,12 +18,12 @@ form {
     background: black;
     opacity: .8;
     font-size: 1.2em;
-    width: 100%;
+    width:600px;
     max-width: 600px;
     border-radius: 5px;
     padding: 30px;
-    height: auto;
-    max-height: 500px;
+    height: 450px;
+    max-height: 450px;
 }
 
 .search input {
@@ -33,11 +32,13 @@ form {
     max-width: 600px;
     font-size: 1em;
     margin-left: 5px;
-    height: 40px;
+    border: none;
+    border-radius: 2px;
+    height: 20px;
 }
 
 .search {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     align-items: stretch;
 }
@@ -48,8 +49,10 @@ form {
     cursor: pointer;
     width: 50px;
     height: 40px;
+    border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    
 }
 
 .btn-search:hover {
