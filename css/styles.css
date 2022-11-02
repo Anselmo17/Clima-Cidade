@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('../assets/fundo-clima.jpg');
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    color: white;
+    background: black;
+    opacity: .8;
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+    padding: 30px;
+    height: auto;
+    max-height: 500px;
+}
+
+.search input {
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    font-size: 1em;
+    margin-left: 5px;
+    height: 40px;
+}
+
+.search {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+.btn-search {
+    background: rgb(25, 110, 10);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn-search:hover {
+    background: rgb(25, 110, 10);
+    color: white;
+}
+
+#bandeiraCurrent{
+    width: 50px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.grau {
+    font-size: 3em;
+    margin: 10px 10px;
+}
+
+.align-label {
+    display: flex;
+    justify-content: center;
+}
+
+.city {
+    margin: 15px 0px;
+    font-size: 1.9em;
+}
+
+.notFound{
+    display: none;
+}
+
+.hiddenCard{
+    display: none;
+}

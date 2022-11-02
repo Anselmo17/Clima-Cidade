@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="shortcut icon" href="./assets/favicon-clima.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 
+        <link rel="stylesheet" href="./css/font-icons.css"/>
+    -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Formulario de clima -->
+    <section class="container">
+        <form>
+            <h3>
+                Pesquisar clima de uma cidade:
+            </h3>
+
+            <!-- busca -->
+            <div class="search">
+                <input type="text" placeholder="Buscar cidade..." maxlength="50" id="city">
+                <div>
+                    <button class="btn-search" onclick="searchCity()" type="button">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <hr />
+
+            <section class="hiddenCard">
+                <!-- result found -->
+                <section class="found">
+                    <!-- Cidade -->
+                    <div class="align-label">
+                        <label class="city">
+                            <span id="cityCurrent">
+                                Itapevi
+                            </span>
+                            <img id="bandeiraCurrent" src="https://countryflagsapi.com/png/br">
+                        </label>
+                    </div>
+
+
+                    <!-- Grau -->
+                    <div class="align-label">
+                        <label class="grau align-center">
+                            <span id="grauCurrent">
+                                26°C
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Tempo -->
+                    <div class="align-label">
+                        <label>
+                            <span>
+                                <i class="fa-sharp fa-solid fa-droplet"></i>
+                            </span>
+                            <span id="tempoCurrent">
+                                Nublado
+                            </span>
+
+                        </label>
+                    </div>
+                    <br>
+
+                    <!-- Clima -->
+                    <div class="align-label">
+                        <label>
+                            <span>
+                                <i class="fa-solid fa-umbrella"></i>
+                            </span>
+                            <span id="umidadeCurrent">
+                                64% |
+                            </span>
+                            <span>
+                                <i class="fa-sharp fa-solid fa-shoe-prints"></i>
+                            </span>
+                            <span id="ventoCurrent">
+                                2.21Km/h
+                            </span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- not found -->
+                <section class="notFound">
+                    <h3>Nenhum resultado encontrado</h3>
+                </section>
+            </section>
+        </form>
+    </section>
+
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
