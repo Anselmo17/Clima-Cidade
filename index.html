@@ -39,7 +39,22 @@
 
             <hr />
 
+            <!-- loading -->
+            <section class="hiddenLoading">
+                <label>Pesquisando...</label>
+                <div class="loader"></div>
+            </section>
+
+            <!-- card clima -->
             <section class="hiddenCard">
+                <div>
+                    <button class="btn-clear" type="button" onclick="clearFilds()" >
+                        <span>
+                            Limpar Cidade
+                            <i class="fa-sharp fa-solid fa-trash-can"></i>
+                        </span>
+                    </button>
+                </div>
                 <!-- result found -->
                 <section class="found">
                     <!-- Cidade -->
@@ -97,7 +112,12 @@
 
                 <!-- not found -->
                 <section class="notFound">
-                    <h3>Nenhum resultado encontrado</h3>
+                    <h3>
+                        Nenhum resultado encontrado
+                    <span>
+                        <i class="fa-sharp fa-solid fa-triangle-exclamation"></i> !!!
+                    </span>
+                    </h3>
                 </section>
             </section>
         </form>

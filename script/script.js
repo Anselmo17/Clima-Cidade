@@ -20,10 +20,12 @@ async function searchCity() {
     const citySearch = document.getElementById("city").value;
 
     // search api 
+   show(true);
     const urlApi = `${url}${citySearch}${key}`;
     const result = await fetch(urlApi);
     const findCity = await result.json();
 
+    show(false);
     const sucesso = 200;
     // add card
     const hiddenCard = document.querySelector(".hiddenCard");
@@ -49,4 +51,14 @@ async function searchCity() {
     temp.innerText = findCity.weather[0].description;
     umidade.innerHTML = findCity.main.humidity + '%';
     vento.innerHTML = findCity.wind.speed + 'km/h';
+}
+
+function clearFilds(){
+    document.getElementById("city").value = '';
+}
+
+
+function show(loading){
+    const loadingCurrent = document.querySelector(".hiddenLoading");
+    loadingCurrent.style = loading ? 'display:flex;': 'display:none';
 }

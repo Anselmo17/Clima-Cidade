@@ -19,12 +19,16 @@ form {
     background: black;
     opacity: .8;
     font-size: 1.2em;
-    width:600px;
+    width: 100%;
     max-width: 600px;
     border-radius: 5px;
     padding: 30px;
-    height: 450px;
+    height: auto;
     max-height: 450px;
+}
+
+input:focus {
+    outline: 0;
 }
 
 .search input {
@@ -53,7 +57,7 @@ form {
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    
+
 }
 
 .btn-search:hover {
@@ -61,7 +65,31 @@ form {
     color: white;
 }
 
-#bandeiraCurrent{
+.btn-clear {
+    background: rgb(194, 206, 192);
+    color: rgb(27, 17, 17);
+    font-weight: bold;
+    font-size: .8em;
+    cursor: pointer;
+    width: auto;
+    margin: 5px 5px;
+    height: 30px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-clear:hover {
+    background: rgb(209, 30, 30);
+    color: white;
+}
+
+.btn-clear span {
+    padding: 5px;
+}
+
+#bandeiraCurrent {
     width: 50px;
 }
 
@@ -84,10 +112,56 @@ form {
     font-size: 1.9em;
 }
 
-.notFound{
+.notFound {
+    display: none;
+    color: red;
+    font-weight: 800;
+}
+
+.hiddenCard {
     display: none;
 }
 
-.hiddenCard{
+
+/********** loading *********/
+.hiddenLoading {
     display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hiddenLoading label{
+    margin-bottom: 15px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
