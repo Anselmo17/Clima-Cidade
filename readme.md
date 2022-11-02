@@ -8,8 +8,7 @@
 
 
 
-## Informações da tela Criada 
-* Foi uma grid responsivo criado com cards de pokemons onde fazemos uma chamada de api.
-* Com o retorno montamos um grid de dados com retorno dos dados.
-* E com as informações mostramos dados de cada pokemon.
+## Informações do Aplicativo
+* Aplicativo criado para pesquisa de clima em diversas cidades.
+* Api utilizada para busca clima das cidades, retornando diversos dados para informações da cidade.
 
