@@ -13,6 +13,10 @@ const temp = document.getElementById("tempoCurrent");
 const umidade = document.getElementById("umidadeCurrent");
 const vento = document.getElementById("ventoCurrent");
 
+// valid item found
+const notFound = document.querySelector(".notFound");
+const found = document.querySelector(".found");
+
 
 
 async function searchCity() {
@@ -31,9 +35,6 @@ async function searchCity() {
     const hiddenCard = document.querySelector(".hiddenCard");
     hiddenCard.style = 'display:block';
     
-    // valid item found
-    const notFound = document.querySelector(".notFound");
-    const found = document.querySelector(".found");
 
     if (findCity.cod !== sucesso) {
         notFound.style = 'display:block;';
@@ -55,6 +56,8 @@ async function searchCity() {
 
 function clearFilds(){
     document.getElementById("city").value = '';
+    notFound.style = 'display:none;';
+    found.style = 'display:none'
 }
 
 
