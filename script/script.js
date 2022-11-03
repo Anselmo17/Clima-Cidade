@@ -21,7 +21,7 @@ const found = document.querySelector(".found");
 
 async function searchCity() {
     // value city
-    const citySearch = document.getElementById("city").value;
+    const citySearch = document.getElementById("city").value.trim();
 
     // search api 
    show(true);
