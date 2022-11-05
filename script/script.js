@@ -22,9 +22,19 @@ const found = document.querySelector(".found");
 async function searchCity() {
     // value city
     const citySearch = document.getElementById("city").value.trim();
+    const hiddenCard = document.querySelector(".hiddenCard");
 
+    // validate search
+    if (!citySearch) {
+        hiddenCard.style = 'display:block';
+        found.style = 'display:none';
+        notFound.style = 'display:block;';
+        return;
+    }
+    // clear sections 
+    clearSections();
     // search api 
-   show(true);
+    show(true);
     const urlApi = `${url}${citySearch}${key}`;
     const result = await fetch(urlApi);
     const findCity = await result.json();
@@ -32,9 +42,8 @@ async function searchCity() {
     show(false);
     const sucesso = 200;
     // add card
-    const hiddenCard = document.querySelector(".hiddenCard");
     hiddenCard.style = 'display:block';
-    
+
 
     if (findCity.cod !== sucesso) {
         notFound.style = 'display:block;';
@@ -54,14 +63,19 @@ async function searchCity() {
     vento.innerHTML = findCity.wind.speed + 'km/h';
 }
 
-function clearFilds(){
+function clearFields() {
     document.getElementById("city").value = '';
     notFound.style = 'display:none;';
-    found.style = 'display:none'
+    found.style = 'display:none';
+}
+
+function clearSections() {
+    notFound.style = 'display:none;';
+    found.style = 'display:none';
 }
 
 
-function show(loading){
+function show(loading) {
     const loadingCurrent = document.querySelector(".hiddenLoading");
-    loadingCurrent.style = loading ? 'display:flex;': 'display:none';
+    loadingCurrent.style = loading ? 'display:flex;' : 'display:none';
 }
